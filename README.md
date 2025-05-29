@@ -46,22 +46,11 @@
 ### `Enums/`
 - En esta carpeta defines tipos de datos constantes, como:
 
-```csharp
-enum Priority { Low, Medium, High }
-asdf
-asdf
-as
-df
-as
-dfsa
-df
-a
-sdf
-as
-df
-
 
 ## ÁRBOL DE CARPETAS
+
+```csharp
+enum Priority { Low, Medium, High }
 
 TodoApi/
 │
