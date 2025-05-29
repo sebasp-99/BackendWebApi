@@ -78,3 +78,101 @@ TodoApi/
 ![image](https://github.com/user-attachments/assets/39d4e449-8bce-4dc5-9206-93b90187ede2)
 
 
+## ENDPOINTS PRINCIPALES
+
+Todos los endpoints (excepto register y login) requieren autenticación con JWT.
+
+Autenticación
+
+### POST /api/account/register
+
+Registra un nuevo usuario.
+
+{
+  "username": "usuario1",
+  "email": "usuario@email.com",
+  "password": "Password123!"
+}
+
+### POST /api/account/login
+
+Inicia sesión y devuelve un token JWT.
+
+{
+  "username": "usuario1",
+  "password": "Password123!"
+}
+
+Respuesta:
+
+{ "token": "eyJhbGciOi..." }
+
+Gestión de Tareas
+
+### GET /api/tareas
+
+Obtiene las tareas del usuario autenticado.
+
+### POST /api/tareas
+
+Crea una nueva tarea.
+
+{
+  "titulo": "Estudiar para el examen",
+  "descripcion": "Matemáticas y Física",
+  "estado": "Pendiente"
+}
+
+### PUT /api/tareas/{id}
+
+Actualiza una tarea por ID.
+
+### DELETE /api/tareas/{id}
+
+Elimina una tarea por ID.
+
+💂 Gestión de Categorías
+
+### GET /api/categorias
+
+Lista todas las categorías.
+
+### POST /api/categorias
+
+Crea una nueva categoría.
+
+{
+  "nombre": "Trabajo"
+}
+
+### Autenticación JWT
+
+Para acceder a los endpoints protegidos:
+
+Inicia sesión con /api/account/login.
+
+Copia el token recibido.
+
+En Swagger, haz clic en "Authorize" y pega:
+
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6...
+
+O en Postman, usa el header:
+
+Authorization: Bearer TU_TOKEN
+
+ Ejecución del Proyecto
+
+### Clona el repositorio:
+
+git clone https://github.com/tu-usuario/TodoApp.git
+
+Configura la cadena de conexión en appsettings.json.
+
+### Ejecuta las migraciones:
+
+dotnet ef database update
+
+### Inicia el servidor:
+
+dotnet run
