@@ -73,6 +73,8 @@ TodoApi/
 
 ```
 
+## Diagrama ER
+
 ![image](https://github.com/user-attachments/assets/39d4e449-8bce-4dc5-9206-93b90187ede2)
 
 
